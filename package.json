@@ -9,6 +9,7 @@
   "author": "Rodrigo Tavares",
   "license": "MIT",
   "devDependencies": {
-    "cypress": "^9.6.1"
+    "cypress": "^9.6.1",
+    "cypress-file-upload": "^5.0.8"
   }
 }
