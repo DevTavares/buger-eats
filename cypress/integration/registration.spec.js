@@ -31,28 +31,8 @@ describe('Cadastro', ()=>{
         cnh: 'cnh-digital.jpg'
       }
     }
-    // Criando uma massa de dados com as informações erradas
-    var badDeliveryman = {
-      name: 'Rodrigo Tavares',
-      cpf: '00011122233',
-      email: 'email@hotmail.com',
-      whatsapp: '119999999',
-      endereco: {
-        cep: '05894370',
-        road: 'Rua Manoel da Conceição',
-        number: '14',
-        complement: 'Macedônia',
-        district: 'Jardim Macedônia',
-        city_uf: 'São Paulo/SP'
-      },
-      // Definindo os metodos de entrega disponíveis
-      delivery_method: {
-        first_method: "Moio",
-        second_method: "Bike",
-        third_method: "Van Carro",
-        cnh: 'cnh-digital.jpg'
-      }
-    }
+    // Criando uma massa de dados com as informações erradas 
+
 
     cy.get('input[name="name"]').type(deliveryman.name)
     cy.get('input[name="cpf"]').type(deliveryman.cpf)
