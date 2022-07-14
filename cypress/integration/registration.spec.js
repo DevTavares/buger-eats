@@ -31,9 +31,6 @@ describe('Cadastro', ()=>{
         cnh: 'cnh-digital.jpg'
       }
     }
-    // Criando uma massa de dados com as informações erradas 
-
-
     cy.get('input[name="name"]').type(deliveryman.name)
     cy.get('input[name="cpf"]').type(deliveryman.cpf)
     cy.get('input[name="email"]').type(deliveryman.email)
@@ -50,9 +47,11 @@ describe('Cadastro', ()=>{
     cy.get('input[name="city-uf"]').should('have.value', deliveryman.endereco.city_uf)
     //Buscando um elemento pelo texto através da 'CONTAINS'
     //CONSTAINS recebe o localizador (Juntar um localizador CSS com um texto que existe na página)
-    cy.contains('.delivery-method li', deliveryman.delivery_method.first_method).click()
     cy.contains('.delivery-method li', deliveryman.delivery_method.third_method).click()
 
-    
+    cy.get('div[class="dropzone"]').selectFile('cypress/fixtures/cnh-digital.jpg', {action: 'drag-drop',})
+
+
+
   })
 })
