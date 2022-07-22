@@ -1,0 +1,42 @@
+{
+  "signup": {
+    "name": "Rodrigo Tavares",
+    "cpf": "00011122212",
+    "email": "email@hotmail.com",
+    "whatsapp": "11999999999",
+    "address": {
+      "postalcode": "05894370",
+      "street": "Rua Manoel da Conceição",
+      "number": "14",
+      "details": "Macedônia",
+      "district": "Jardim Macedônia",
+      "city_uf": "São Paulo/SP"
+    },
+    "delivery_method": {
+      "first_method": "Moto",
+      "second_method": "Bike Elétrica",
+      "third_method": "Van/Carro",
+      "cnh": "cnh-digital.jpg"
+    }
+  },
+  "cpf_inv": {
+    "name": "Cristiano Ronaldo",
+    "cpf": "000111222AS",
+    "email": "cr7@hotmail.com",
+    "whatsapp": "11999999999",
+    "address": {
+      "postalcode": "05422001",
+      "street": "Rua dos Pinheiros",
+      "number": "14",
+      "details": "Metrô",
+      "district": "Pinheiros",
+      "city_uf": "São Paulo/SP"
+    },
+    "delivery_method": {
+      "first_method": "Moto",
+      "second_method": "Bike Elétrica",
+      "third_method": "Van/Carro",
+      "cnh": "cnh-digital.jpg"
+    }
+  }
+}

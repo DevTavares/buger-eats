@@ -3,9 +3,7 @@
 class SignupPage {
 
   go() {
-    //Definindo o tamanho da tela
-  cy.viewport(1440, 900)
-  cy.visit('https://buger-eats.vercel.app')
+  cy.visit('/')
   //Localizador CSS para encontrar o botão para clicar 
   cy.get('a[href="/deliver"]').click()
   // Checando se realmente está na página de cadastro com um Texto existente na mesma
@@ -13,7 +11,7 @@ class SignupPage {
   }
 
   fillForm (deliveryman) {
-    cy.get('input[name="name"]').type(deliveryman.name)
+    cy.get('input[name="fullName"]').type(deliveryman.name)
     cy.get('input[name="cpf"]').type(deliveryman.cpf)
     cy.get('input[name="email"]').type(deliveryman.email)
     cy.get('input[name="whatsapp"]').type(deliveryman.whatsapp)
@@ -28,7 +26,7 @@ class SignupPage {
     cy.get('input[name="district"]').should('have.value', deliveryman.address.district)
     cy.get('input[name="city-uf"]').should('have.value', deliveryman.address.city_uf)
     //Buscando um elemento pelo texto através da 'CONTAINS' ** CONSTAINS recebe o localizador (Juntar um localizador CSS com um texto que existe na página) **
-    cy.contains('.delivery-method li', deliveryman.delivery_method.third_method).click()
+    cy.contains('.delivery-method li', deliveryman.delivery_method.second_method).click()
     //Inserindo a imagem da CNH no campo com drag-drop
     cy.get('div[class="dropzone"]').selectFile('cypress/fixtures/images/cnh-digital.jpg', {action: 'drag-drop',})
   }
@@ -49,4 +47,4 @@ class SignupPage {
   }
 }
 
-export default SignupPage;
+export default new SignupPage;
