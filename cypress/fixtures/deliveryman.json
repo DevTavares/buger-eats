@@ -38,5 +38,26 @@
       "third_method": "Van/Carro",
       "cnh": "cnh-digital.jpg"
     }
-  }
+  },
+  "email_inv": {
+    "name": "Rodrigo Tavares",
+    "cpf": "00011122212",
+    "email": "email.com.br",
+    "whatsapp": "11999999999",
+    "address": {
+      "postalcode": "05894370",
+      "street": "Rua Manoel da Conceição",
+      "number": "14",
+      "details": "Macedônia",
+      "district": "Jardim Macedônia",
+      "city_uf": "São Paulo/SP"
+    },
+    "delivery_method": {
+      "first_method": "Moto",
+      "second_method": "Bike Elétrica",
+      "third_method": "Van/Carro",
+      "cnh": "cnh-digital.jpg"
+    }
+}
+
 }
