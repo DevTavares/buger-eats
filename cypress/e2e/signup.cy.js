@@ -1,16 +1,8 @@
-import signup from '../pages/SignupPage'
-import SignupFactory from '../factories/SignupFactory'
-//import { it } from 'faker/lib/locales'
-import SignupPage from '../pages/SignupPage'
-//import { it } from 'faker/lib/locales'
+import signup from '../support/pages/SignupPage'
+import SignupFactory from '../support/factories/SignupFactory'
+
 
 describe('Cadastro', () => {
-  // beforeEach(function (){
-  //  cy.fixture('deliveryman').then((d) => {
-  //    this.deliveryman = d
-  //  })
-  //})
-
   it('User should be deliver', function () {
     var deliveryman = SignupFactory.deliveryman()
 
@@ -59,14 +51,14 @@ describe('Cadastro', () => {
 
     ]
 
-    before(function(){
+    beforeEach(function(){
       signup.go()
       signup.submit()
     })
 
     messages.forEach(function(msg) {
       it(`${msg.field} is required`, function() {
-        SignupPage.alerMessageShouldBe(msg.output)
+        signup.alerMessageShouldBe(msg.output)
       })
     })
   })
